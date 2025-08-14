@@ -1,0 +1,153 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+
+/* -------------------------------------
+   NHS Design System: Root Variables
+-------------------------------------- */
+:root {
+  --nhs-blue: #005eb8;
+  --nhs-blue-light: #0072ce;
+  --nhs-blue-dark: #003974;
+  --nhs-red: #da291c;
+  --nhs-green: #006747;
+  --nhs-yellow: #ffeb3b;
+
+  --nhs-white: #ffffff;
+  --nhs-black: #212b32;
+  --nhs-dark-bg: #1e1e1e;
+  --nhs-light-bg: #ffffff;
+
+  --nhs-light-gray: #f5f5f5;
+  --nhs-dark-gray: #4c6272;
+  --nhs-border: #aeb7bd;
+
+  --nhs-text: var(--nhs-black);
+  --nhs-focus-color: var(--nhs-yellow);
+
+  font-family: 'Frutiger', 'Arial', sans-serif;
+  line-height: 1.5;
+  font-weight: 400;
+
+  font-synthesis: none;
+  text-rendering: optimizeLegibility;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+}
+
+
+/* -------------------------------------
+   Global Styling
+-------------------------------------- */
+body {
+  margin: 0;
+  min-width: 320px;
+  min-height: 100vh;
+  background-color: var(--nhs-light-bg);
+  color: var(--nhs-text);
+}
+
+.dark body {
+  background-color: var(--nhs-dark-bg);
+  color: var(--nhs-white);
+}
+
+h1 {
+  font-size: 3.2em;
+  line-height: 1.1;
+}
+
+
+/* -------------------------------------
+   Buttons (NHS Style)
+-------------------------------------- */
+button {
+  border-radius: 8px;
+  border: 1px solid transparent;
+  padding: 0.6em 1.2em;
+  font-size: 1em;
+  font-weight: 500;
+  font-family: inherit;
+  background-color: var(--nhs-blue);
+  cursor: pointer;
+  transition: all 0.2s ease;
+}
+button:hover {
+  background-color: var(--nhs-blue-dark);
+  border-color: var(--nhs-blue-dark);
+}
+button:focus,
+button:focus-visible {
+  outline: 4px auto var(--nhs-focus-color);
+}
+
+
+/* -------------------------------------
+   Custom NHS Utility Classes
+-------------------------------------- */
+
+/* Text colors */
+.text-nhs-link {
+  color: var(--nhs-blue-light);
+}
+.hover\:text-nhs-link-hover:hover {
+  color: var(--nhs-blue-dark);
+}
+.text-nhs-dark-gray {
+  color: var(--nhs-dark-gray);
+}
+.text-nhs-blue {
+  color: var(--nhs-blue);
+}
+.text-nhs-blue-light {
+  color: var(--nhs-blue-light);
+}
+.text-nhs-blue-dark {
+  color: var(--nhs-blue-dark);
+}
+
+/* Border colors */
+.border-nhs-border {
+  border-color: var(--nhs-border);
+}
+.border-nhs-divider {
+  border-color: var(--nhs-border);
+}
+.dark .border-nhs-divider {
+  border-color: var(--nhs-white);
+}
+
+/* Background colors */
+.bg-nhs-light-gray {
+  background-color: var(--nhs-light-gray);
+}
+.bg-nhs-blue-light\/10 {
+  background-color: rgba(0, 114, 206, 0.1); /* NHS Blue Light at 10% */
+}
+.hover\:bg-nhs-blue-light\/5:hover {
+  background-color: rgba(0, 114, 206, 0.05);
+}
+
+
+/* -------------------------------------
+   Map Container Fixes
+-------------------------------------- */
+.leaflet-container {
+  width: 100%;
+  height: 100%;
+  min-height: 400px;
+  border-radius: 0.5rem;
+}
+
+.leaflet-tile {
+  filter: none !important;
+  -webkit-filter: grayscale(0%) !important;
+}
+
+.leaflet-control-attribution {
+  font-size: 9px;
+}
+
+
+
