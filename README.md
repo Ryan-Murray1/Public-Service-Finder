@@ -53,8 +53,8 @@ public-service-finder/
 📝 Setup & Installation
 
     1. Clone the repo
-       git clone [your-repository-url]
-       cd public-service-finder
+       git clone https://github.com/Ryan-Murray1/Public-Service-Finder.git
+       cd Public-Service-Finder
 
     2. Install dependencies
        npm install
