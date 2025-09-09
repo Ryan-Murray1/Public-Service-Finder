@@ -99,7 +99,7 @@ export default function ServiceList({ services, selectedService, setSelectedServ
                                             rel="noopener noreferrer"
                                             className="text-nhs-link hover:underline break-all"
                                         >
-                                            {website.replace(/^https?:\/\//, '').replace(/\/$/, '')} // Remove http:// or https:// from website URL
+                                            {website.replace(/^https?:\/\//, '').replace(/\/$/, '')} { /* Remove http:// or https:// from website URL */}
                                         </a>
                                     </p>
                                 )}
